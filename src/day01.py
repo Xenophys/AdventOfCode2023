@@ -59,13 +59,10 @@ def day01_part01(input_file_name):
 
 def day01_part02(input_file_name):
     input = utils.readfile(input_file_name)
-    # output = open("debug_day01.txt", "a")
     line_numbers = []
     for line in input:
         line_number = get_alphanumeric_number_from_line(line)
-        # output.write(f'{line} - {str(line_number)}\n')
         line_numbers.append(line_number)
-    # output.close()
     assert len(input) == len(line_numbers)
     result = sum(line_numbers)
     return result

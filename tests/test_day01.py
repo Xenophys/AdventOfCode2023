@@ -4,11 +4,11 @@ from src.utils import readfile
 
 
 def test_day01_part01():
-    input = readfile("../tests/resources/test-input_day01_01.txt")
+    input = readfile("resources/test-input_day01_01.txt")
     expected_line_results = [12, 38, 15, 77]
     for count in range(0, len(input)):
         assert get_number_from_line(input[count]) == expected_line_results[count]
-    assert day01_part01("../tests/resources/test-input_day01_01.txt") == 142
+    assert day01_part01("resources/test-input_day01_01.txt") == 142
 
 
 def test_day01_part02():
