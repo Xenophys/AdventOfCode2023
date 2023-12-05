@@ -2,10 +2,8 @@ from src.day02 import Game, CubeSet, parse_game, part01, part02
 from src.utils import readfile
 
 
-
 def build_expected_games():
     games = []
-    # Game 1
     game = Game(1)
     cube_set = CubeSet()
     cube_set.set_cubes("3", "blue")
@@ -23,7 +21,6 @@ def build_expected_games():
     game.add_cube_set(cube_set)
     games.append(game)
 
-    #  Game 2
     game = Game(2)
     cube_set = CubeSet()
     cube_set.set_cubes("1", "blue")
@@ -97,12 +94,11 @@ def build_expected_games():
     return games
 
 
-
 def test_parse_game():
-    input = readfile("resources/test-input_day02_01.txt")
+    lines = readfile("resources/test-input_day02_01.txt")
     expected = build_expected_games()
-    for index in range(0, len(input)):
-        game = parse_game(input[index])
+    for index in range(0, len(lines)):
+        game = parse_game(lines[index])
         expected_game = expected[index]
         assert game == expected_game
 

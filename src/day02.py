@@ -33,6 +33,7 @@ class CubeSet:
             return False
         return True
 
+
 class Game:
     def __init__(self, game_number: int):
         self.game_number = game_number

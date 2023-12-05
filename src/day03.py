@@ -1,6 +1,7 @@
 from src import utils
 
-def is_marker(char:str)->bool:
+
+def is_marker(char: str) -> bool:
     return char != "." and not char.isnumeric()
 
 

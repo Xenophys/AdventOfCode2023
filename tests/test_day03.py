@@ -9,6 +9,7 @@ def test_extract_marked_numbers():
     numbers = extract_marked_numbers(lines)
     assert numbers == expected_numbers
 
+
 def test_part01():
     result = part01("resources/test-input_day03.txt")
     assert result == 4361

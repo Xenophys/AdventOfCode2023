@@ -49,21 +49,22 @@ def get_alphanumeric_number_from_line(input_line):
 
 
 def day01_part01(input_file_name):
-    input = utils.readfile(input_file_name)
+    lines = utils.readfile(input_file_name)
     line_numbers = []
-    for line in input:
+    for line in lines:
         line_number = get_number_from_line(line)
         line_numbers.append(line_number)
     result = sum(line_numbers)
     return result
 
+
 def day01_part02(input_file_name):
-    input = utils.readfile(input_file_name)
+    lines = utils.readfile(input_file_name)
     line_numbers = []
-    for line in input:
+    for line in lines:
         line_number = get_alphanumeric_number_from_line(line)
         line_numbers.append(line_number)
-    assert len(input) == len(line_numbers)
+    assert len(lines) == len(line_numbers)
     result = sum(line_numbers)
     return result
 
