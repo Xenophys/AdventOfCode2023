@@ -1,4 +1,4 @@
-from src import utils
+from src.utils import readfile
 
 
 def is_marker(char: str) -> bool:
@@ -44,12 +44,7 @@ def extract_marked_numbers(lines: list[str]):
 
 
 def part01(input_file_name: str):
-    lines = utils.readfile(input_file_name)
+    lines = readfile(input_file_name)
     numbers = extract_marked_numbers(lines)
     return sum(numbers)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    part01_result = part01("resources/input_day03.txt")
-    print(f"Result of part 1: '{str(part01_result)}'")

@@ -10,13 +10,12 @@ class CubeSet:
 
     def set_cubes(self, count, color):
         number = int(count)
-        match color:
-            case "blue":
-                self.blue = number
-            case "green":
-                self.green = number
-            case "red":
-                self.red = number
+        if color == "blue":
+            self.blue = number
+        elif color == "green":
+            self.green = number
+        elif color == "red":
+            self.red = number
 
     def __eq__(self, other):
         if not isinstance(other, type(self)):
@@ -114,9 +113,3 @@ def part02(input_file_name: str):
     return sum(game_powers)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    part1_result = part01("resources/input_day02.txt", CubeSet(red=12, green=13, blue=14))
-    print(f"Result of part 1: '{str(part1_result)}'")
-    part2_result = part02("resources/input_day02.txt")
-    print(f"Result of part 2: '{str(part2_result)}'")
