@@ -1,5 +1,5 @@
 # Day02
-from src.utils import readfile
+from utils.utils import readfile
 
 
 class CubeSet:
@@ -113,3 +113,9 @@ def part02(input_file_name: str):
     return sum(game_powers)
 
 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    part1_result = part01("input_day02.txt", CubeSet(red=12, green=13, blue=14))
+    print(f"Result of part 1: '{str(part1_result)}'")
+    part2_result = part02("input_day02.txt")
+    print(f"Result of part 2: '{str(part2_result)}'")

@@ -1,5 +1,5 @@
 # Day01
-from src.utils import readfile
+from utils.utils import readfile
 
 number_strings = dict(one="1", two="2", three="3", four="4", five="5", six="6", seven="7", eight="8", nine="9")
 
@@ -69,3 +69,9 @@ def day01_part02(input_file_name):
     return result
 
 
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    part1_result = day01_part01("input_day01.txt")
+    print(f"Result of part 1: '{str(part1_result)}'")
+    part2_result = day01_part02("input_day01.txt")
+    print(f"Result of part 2: '{str(part2_result)}'")
