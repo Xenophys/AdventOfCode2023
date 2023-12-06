@@ -1,5 +1,5 @@
 # Day01
-from src import utils
+from src.utils import readfile
 
 number_strings = dict(one="1", two="2", three="3", four="4", five="5", six="6", seven="7", eight="8", nine="9")
 
@@ -49,7 +49,7 @@ def get_alphanumeric_number_from_line(input_line):
 
 
 def day01_part01(input_file_name):
-    lines = utils.readfile(input_file_name)
+    lines = readfile(input_file_name)
     line_numbers = []
     for line in lines:
         line_number = get_number_from_line(line)
@@ -59,7 +59,7 @@ def day01_part01(input_file_name):
 
 
 def day01_part02(input_file_name):
-    lines = utils.readfile(input_file_name)
+    lines = readfile(input_file_name)
     line_numbers = []
     for line in lines:
         line_number = get_alphanumeric_number_from_line(line)
@@ -68,11 +68,4 @@ def day01_part02(input_file_name):
     result = sum(line_numbers)
     return result
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    part1_result = day01_part01("resources/input_day01.txt")
-    print(f"Result of part 1: '{str(part1_result)}'")
-    part2_result = day01_part02("resources/input_day01.txt")
-    print(f"Result of part 2: '{str(part2_result)}'")
 

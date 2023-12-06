@@ -95,7 +95,7 @@ def build_expected_games():
 
 
 def test_parse_game():
-    lines = readfile("resources/test-input_day02_01.txt")
+    lines = readfile("tests/resources/test-input_day02_01.txt")
     expected = build_expected_games()
     for index in range(0, len(lines)):
         game = parse_game(lines[index])
@@ -105,10 +105,10 @@ def test_parse_game():
 
 def test_part01():
     test_cube_set = CubeSet(red=12, green=13, blue=14)
-    solution = part01("resources/test-input_day02_01.txt", test_cube_set)
+    solution = part01("tests/resources/test-input_day02_01.txt", test_cube_set)
     assert solution == 8
 
 
 def test_part02():
-    solution = part02("resources/test-input_day02_01.txt")
+    solution = part02("tests/resources/test-input_day02_01.txt")
     assert solution == 2286
