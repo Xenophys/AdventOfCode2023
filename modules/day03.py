@@ -1,4 +1,8 @@
-from utils.utils import readfile
+from utils import readfile
+import os
+
+script_path = os.path.dirname(__file__)
+resources_path = os.path.join(os.path.split(script_path)[0], "resources")
 
 
 def is_marker(char: str) -> bool:
@@ -97,7 +101,7 @@ def part02(input_file_name: str):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    part01_result = part01("input_day03.txt")
+    part01_result = part01(os.path.join(resources_path, "input_day03.txt"))
     print(f"Result of part 1: '{str(part01_result)}'")
-    part02_result = part02("input_day03.txt")
+    part02_result = part02(os.path.join(resources_path, "input_day03.txt"))
     print(f"Result of part 2: '{str(part02_result)}'")

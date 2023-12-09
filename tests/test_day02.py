@@ -1,6 +1,9 @@
-from .day02 import Game, CubeSet, parse_game, part01, part02
-from utils.utils import readfile
+from modules.day02 import Game, CubeSet, parse_game, part01, part02
+from modules.utils import readfile
+import os
 
+script_path = os.path.dirname(__file__)
+resources_path = os.path.join(os.path.split(script_path)[0], "resources")
 
 def build_expected_games():
     games = []
@@ -95,7 +98,7 @@ def build_expected_games():
 
 
 def test_parse_game():
-    lines = readfile("day02/test-input_day02.txt")
+    lines = readfile(os.path.join(resources_path, "test-input_day02.txt"))
     expected = build_expected_games()
     for index in range(0, len(lines)):
         game = parse_game(lines[index])
@@ -105,10 +108,10 @@ def test_parse_game():
 
 def test_part01():
     test_cube_set = CubeSet(red=12, green=13, blue=14)
-    solution = part01("day02/test-input_day02.txt", test_cube_set)
+    solution = part01(os.path.join(resources_path, "test-input_day02.txt"), test_cube_set)
     assert solution == 8
 
 
 def test_part02():
-    solution = part02("day02/test-input_day02.txt")
+    solution = part02(os.path.join(resources_path, "test-input_day02.txt"))
     assert solution == 2286

@@ -1,6 +1,9 @@
 # Day02
-from utils.utils import readfile
+from utils import readfile
+import os
 
+script_path = os.path.dirname(__file__)
+resources_path = os.path.join(os.path.split(script_path)[0], "resources")
 
 class CubeSet:
     def __init__(self, blue=0, green=0, red=0):
@@ -115,7 +118,7 @@ def part02(input_file_name: str):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    part1_result = part01("input_day02.txt", CubeSet(red=12, green=13, blue=14))
+    part1_result = part01(os.path.join(resources_path, "input_day02.txt"), CubeSet(red=12, green=13, blue=14))
     print(f"Result of part 1: '{str(part1_result)}'")
-    part2_result = part02("input_day02.txt")
+    part2_result = part02(os.path.join(resources_path, "input_day02.txt"))
     print(f"Result of part 2: '{str(part2_result)}'")

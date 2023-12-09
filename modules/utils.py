@@ -1,3 +1,4 @@
+
 def readfile(filename, strip_lines=True):
 	with open(filename, 'r') as prov_file:
 		if strip_lines:
