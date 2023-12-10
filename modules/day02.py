@@ -5,6 +5,7 @@ import os
 script_path = os.path.dirname(__file__)
 resources_path = os.path.join(os.path.split(script_path)[0], "resources")
 
+
 class CubeSet:
     def __init__(self, blue=0, green=0, red=0):
         self.blue = blue

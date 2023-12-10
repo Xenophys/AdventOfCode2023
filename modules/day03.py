@@ -47,7 +47,7 @@ def extract_marked_numbers(lines: list[str]):
     return numbers
 
 
-def check_and_add_number(lines, number: int, pos_x: int, pos_y:int, star_dict):
+def check_and_add_number(lines, number: int, pos_x: int, pos_y: int, star_dict):
     positions = []
     for row in range(max(0, pos_y - 1), min(pos_y + 2, len(lines))):
         line = lines[row]
